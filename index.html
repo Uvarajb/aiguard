@@ -726,7 +726,7 @@ tbody td {
   <text x="812" y="160" text-anchor="middle" font-size="11" font-weight="800" fill="#002d62" letter-spacing="0.5">☁ ZSCALER CLOUD</text>
   <text x="812" y="178" text-anchor="middle" font-size="12" font-weight="800" fill="#002d62">AI Guard</text>
   <line x1="754" y1="190" x2="870" y2="190" stroke="rgba(0,45,98,0.15)" stroke-width="1"/>
-  <text x="812" y="208" text-anchor="middle" font-size="10" fill="#344563">Policy 2084</text>
+  <text x="812" y="208" text-anchor="middle" font-size="10" fill="#344563">Policy 232314</text>
   <text x="812" y="224" text-anchor="middle" font-size="10" fill="#344563">🔍 PII Detection</text>
   <text x="812" y="240" text-anchor="middle" font-size="10" fill="#344563">💉 Prompt Injection</text>
   <text x="812" y="256" text-anchor="middle" font-size="10" fill="#344563">☠ Toxicity</text>
@@ -819,7 +819,7 @@ tbody td {
       <li>LiteLLM validates virtual key against PostgreSQL</li>
       <li>LiteLLM logs request metadata (tokens, model, user) to PostgreSQL</li>
       <li>If guardrail mode = <code>during_call</code>: prompt is sent to Zscaler AI Guard <strong>BEFORE</strong> model</li>
-      <li>Zscaler AI Guard evaluates prompt against Policy 2084 (PII, Injection, Toxicity, Jailbreak)</li>
+      <li>Zscaler AI Guard evaluates prompt against Policy 232314 (PII, Injection, Toxicity, Jailbreak)</li>
       <li>If <strong>BLOCK</strong>: LiteLLM returns HTTP 400 <code>{"error": "Guardrail blocked this request"}</code> — model never called</li>
       <li>If <strong>ALLOW</strong>: LiteLLM forwards prompt to Ollama <code>:11434</code></li>
       <li>Ollama generates response using llama3 model</li>
@@ -856,7 +856,7 @@ tbody td {
 <h3 id="s3-2">3.2 Zscaler Requirements</h3>
 <ul>
   <li>Active Zscaler tenant with AI Guard licensed</li>
-  <li>AI Guard policy created (<strong>Policy ID: 2084</strong>)</li>
+  <li>AI Guard policy created (<strong>Policy ID: 232314</strong>)</li>
   <li>API credentials: <code>ZSCALER_CLIENT_ID</code> + <code>ZSCALER_CLIENT_SECRET</code></li>
   <li>API endpoint: <code>api.us1.zseclipse.net</code> (or your regional endpoint)</li>
 </ul>
@@ -941,7 +941,7 @@ guardrails:
       api_base: "https://api.us1.zseclipse.net"
       zscaler_client_id: "os.environ/ZSCALER_CLIENT_ID"
       zscaler_client_secret: "os.environ/ZSCALER_CLIENT_SECRET"
-      policy_id: "2084"</code></pre>
+      policy_id: "232314"</code></pre>
 </div>
 
 <h3 id="s4-3">4.3 .env File</h3>
